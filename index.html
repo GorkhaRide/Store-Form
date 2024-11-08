@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gorkha Ride Redirect</title>
+    <script>
+        function redirectToStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check if it's an Android device
+            if (/android/i.test(userAgent)) {
+                window.location.href = 'https://forms.gle/Q35sHaoc4Uum7PUVA';
+            }
+            // Check if it's an iOS device
+            else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = 'https://forms.gle/Q35sHaoc4Uum7PUVA';
+            } else {
+                // Optional fallback link
+                window.location.href = 'https://forms.gle/Q35sHaoc4Uum7PUVA'; // Replace with a fallback URL if needed
+            }
+        }
+    </script>
+</head>
+<body onload="redirectToStore()">
+</body>
+</html>
